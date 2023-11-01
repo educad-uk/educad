@@ -1,0 +1,181 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Educad&#xFE31;Homepage
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(href='index.css' rel='stylesheet')
+nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
+  .container-fluid
+    a.navbar-brand.fw-bold(href='#') Educad
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon.navbar-light
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mx-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Home
+        li.nav-item
+          a.nav-link(href='#') About Us
+        li.nav-item
+          a.nav-link(href='#') Pricing
+        li.nav-item
+          a.nav-link(href='#') Contact
+      a.icon-link.btn.btn-outline-light.fw-bold
+        svg(xmlns='http://www.w3.org/2000/svg' height='1em' viewbox='0 0 512 512')
+          style.
+            svg {
+            fill: #ffffff;
+            }
+          path(d='M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z')
+        |  Login
+#cookie.cookie
+  .cookie-card
+    span.title &#x1F36A; Cookie Notice
+    p.description
+      | We utilise cookies to give you the best experience. 
+      a(href='#') Read cookies policies
+      | .
+    .actions
+      button#remove.accept(type='button') Accept
+.container.mx-auto.landing-container
+  a.lt.landing-text
+    | A good 
+    span.pt #education
+    |  is always a foundation of a 
+    span.pb brighter future
+  p.lt.sublanding-text Tutored by high achieving students.
+  p.pt.landing-button Enroll Now
+.divider
+  .custom-shape-divider-bottom-1693090866
+    svg(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 120' preserveaspectratio='none')
+      path.shape-fill(d='M1200 120L0 16.48 0 0 1200 0 1200 120z')
+.shape-bottom-half.text-center
+.banner
+  .banner-image
+    // <img src="resources/Currency_Two Color.svg" width="500" />
+  .banner-text
+    p.disclaimer  Refer a friend and both get &pound;5 off our hourly rate! 
+    a.share(href='#') Refer a friend
+.container.info
+  a.info-title What do we provide?
+  p.padding.info-subtitle
+    | Our personalised tuition program is designed to help students develop strong reading, writing, and critical thinking skills. Whether you&apos;re preparing for GCSE or SATs exams, our experienced tutors can help you improve your grades and achieve your academic goals.
+  .container
+    .row
+      .col-sm
+        a.info-heading Experienced Tutors
+        p.info-subheading
+          | Our esteemed tutors are not only highly experienced, but they are also accomplished high-achievers who consistently score in the top percentile across the country.
+      .col-sm
+        a.info-heading Personalised
+        p.info-subheading
+          | Experience personalised guidance from a highly skilled tutor who utilises valuable insights from your past assessments to strengthen areas of improvement and elevate your performance.
+      .col-sm
+        a.info-heading Communication
+        p.info-subheading
+          | We maintain a line of communication with the parents to keep them informed about their child&apos;s progress and provide regular updates on their performance.
+    .row
+      .col-sm
+        a.info-heading Assessments
+        p.info-subheading
+          | We take a comprehensive approach to monitoring your progress by conducting regular assessments and providing valuable feedback on every subject we teach. This enables us to identify and address any areas where you may need extra support.
+      .col-sm
+        a.info-heading Resources
+        p.info-subheading
+          | We provide students access to a wealth of additional learning resources, such as videos, practice quizzes, and interactive simulations, to help students reinforce their understanding of key concepts.
+      .col-sm
+        a.info-heading Digital Portal
+        a.new-icon New
+        p.info-subheading
+          | We provide students access to a wealth of additional learning resources, such as videos, practice quizzes, and interactive simulations, to help students reinforce their understanding of key concepts.
+.container-fluid.statistics
+  .container.text-center
+    .row
+      .col-sm
+        a.stats-heading 100+
+        p.stats-subheading Active Students
+      .col-sm
+        a.stats-heading 5k+
+        p.stats-subheading Hours dedicated into students
+      .col-sm
+        a.stats-heading 99.77%
+        p.stats-subheading Uptime (90 days)
+#carouselExampleIndicators.carousel.slide
+  .carousel-indicators
+    button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+    button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+    button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+  .carousel-inner
+    .carousel-item.active
+      .container.text-center
+        p.testimonial
+        a.testimonial-name Ibrahim Khan
+        p.testimonial-text
+          | Educad has truly impressed me with their dedicated tutors and effective teaching methods. My child&apos;s progress has been remarkable, and I&apos;m grateful for the positive impact they&apos;ve had on his learning journey. Highly recommended!
+        p.testimonial-sub Student&apos;s Parent
+    .carousel-item
+      .container.text-center
+        p.testimonial
+        a.testimonial-name Hassan Raza
+        p.testimonial-text
+          | Educad has been a valuable learning resource. The tutors are knowledgeable and helpful, and the study materials are effective. My understanding and grades have improved significantly.
+        p.testimonial-sub Educad Student
+    .carousel-item
+      .container.text-center
+        p.testimonial
+        a.testimonial-name H. Rackham
+        p.testimonial-text
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        p.testimonial-sub Educad Student
+  button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+    span.carousel-control-prev-icon(aria-hidden='true')
+    span.visually-hidden Previous
+  button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+    span.carousel-control-next-icon(aria-hidden='true')
+    span.visually-hidden Next
+.container.form
+  a.info-title Interested in joining us?
+  p.info-subtitle  Fill in this quick survey and a member of our team will contact you shortly. 
+  form(action='/send' method='POST')
+    .form-group
+      .row
+        .col
+          label(for='firstName') Student Name
+          input#firstName.form-control(type='Text' name='firstName' aria-describedby='firstName' placeholder='First Name')
+        .col
+          label
+          input#lastName.form-control(type='Text' name='lastName' aria-describedby='lastName' placeholder='Last Name')
+    .form-group
+      label(for='tuitionType') Tuition Type
+      select#tuitionType.form-control(name='tuitionType')
+        option(selected='') Please Select...
+        |  . 
+        option SATs
+        option GCSE
+        option A-Level
+      small.form-text.text-muted  Enter the qualification your child is working towards. 
+    .form-group
+      label(for='email') Email Address
+      input#email.form-control(type='email' name='email' placeholder='example@gmail.com')
+      small.form-text.text-muted  A confirmation email will be sent to the address you provide. 
+    .form-group
+      label(for='contactNumber') Contact Number
+      input#contactNumber.form-control(type='number' name='contactNumber' placeholder='+(44) 1234 765980')
+      small.form-text.text-muted  We will contact you by this number, please make sure it is correct. 
+    button.btn.btn-light(type='submit') Submit
+footer.purple.text-center.text-white
+  .container.p-4.pb-0
+    section.mb-4
+      a.btn.btn-outline-light.btn-floating.m-1(href='#!' role='button')
+        i.fa.fa-facebook-f
+      a.btn.btn-outline-light.btn-floating.m-1(href='#!' role='button')
+        i.fa.fa-twitter
+      a.btn.btn-outline-light.btn-floating.m-1(href='#!' role='button')
+        i.fa.fa-google
+      a.btn.btn-outline-light.btn-floating.m-1(href='#!' role='button')
+        i.fa.fa-instagram
+  |  Copyright - 
+  .text-center.p-3 Educad &copy; 2023 All Rights Reserved.
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm' crossorigin='anonymous')
+script(src='index.js')

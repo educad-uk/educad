@@ -4,10 +4,10 @@ var router = express.Router();
 var MersenneTwister = require('mersenne-twister');
 var generator = new MersenneTwister();
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index');
-// });
+
+router.get('/', function(req, res, next) {
+   res.render('index');
+});
 
 
 // import { LoremIpsum } from 'lorem-ipsum';

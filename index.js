@@ -15,9 +15,6 @@ var lorem = new LoremIpsum({
   }
 });
 
-app.set("trust proxy", true);
-app.use(redirectWwwTraffic);
-
 app.get('/', (req, res) => res.send(lorem.generateParagraphs(7)))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

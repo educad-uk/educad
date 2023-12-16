@@ -29,7 +29,7 @@ var MailObject = Mail.createTransport({
 });
 
 router.post("/send", (Request, Response) => {
-  readHTMLFile("./views/contactDetailsEmail.pug", function (err, html) {
+  readHTMLFile("./views/contactDetailsEmail.pug", function(err, html) {
     if (err) {
       console.log("error reading file", err);
       return;
@@ -47,14 +47,13 @@ router.post("/send", (Request, Response) => {
     var date = new Date().toISOString().replace(/T/, " ").replace(/\..+/, "");
     var MailQuery = {
       to: "educadtuition@gmail.com",
-      subject:
-        "New Application (#" +
+      subject: "New Application (#" +
         Math.floor(Math.random() * 10000000000 + 1) +
         ")",
       html: htmlToSend,
     };
 
-    MailObject.sendMail(MailQuery, function (error, info) {
+    MailObject.sendMail(MailQuery, function(error, info) {
       if (error) {
         console.log(error);
         Response.sendFile(__dirname + "./views/error.pug");
@@ -63,28 +62,29 @@ router.post("/send", (Request, Response) => {
         Response.sendFile(__dirname + "./views/index.pug");
       }
     });
+  });
 
-    readHTMLFile("./views/recipientEmail.pug", function (err, html2) {
+  readHTMLFile("./views/recipientEmail.pug", function(err, html) {
     if (err) {
       console.log("error reading file", err);
       return;
     }
-    var template2 = Handlebars.compile(html2);
-    var replacements2 = {
+    var template = Handlebars.compile(html);
+    var replacements = {
       firstName: Request.body.firstName,
       lastName: Request.body.lastName,
       contactNumber: Request.body.contactNumber,
       tuitionType: Request.body.tuitionType,
     };
-    var htmlToSend2 = template2(replacements2);
+    var htmlToSend = template(replacements);
 
-    var MailQuery2 = {
+    var MailQuery = {
       to: Request.body.email,
       subject: "We have recieved your application",
-      html: htmlToSend2,
+      html: htmlToSend,
     };
-      
-    MailObject.sendMail(MailQuery2, function (error, info) {
+
+    MailObject.sendMail(MailQuery, function(error, info) {
       if (error) {
         console.log(error);
         Response.sendFile(__dirname + "./views/error.pug");
@@ -95,7 +95,6 @@ router.post("/send", (Request, Response) => {
     });
   });
 });
-
 
 router.get('/', function(req, res, next) {
    res.render('index');

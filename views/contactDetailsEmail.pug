@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      header {
+        background-color: #4b3c99;
+        padding: 30px;
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .large-title {
+        padding: 0px 10px 0px 30px;
+        font-size: 2em;
+        font-weight: bolder;
+      }
+
+      .badge {
+        background-color: #4b3c99;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        height: 30px;
+        padding: 0px 5px;
+        padding-top: 6px;
+        font-size: 12px;
+      }
+
+      .main {
+        padding: 30px;
+      }
+
+      .main .right {
+        width: 475px;
+      }
+
+      .footer {
+        padding: 30px;
+        width: 100%;
+        height: 150px;
+        background-color: #4b3c99;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .title {
+        color: #888888;
+      }
+
+      .subtext {
+        color: white;
+      }
+
+      .icons ul a {
+        border: 1px solid white;
+        border-radius: 7px;
+        color: white;
+        padding: 8px 12px;
+        margin-right: 10px;
+      }
+
+      .icons ul a:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+
+      .text {
+        margin-top: 20px;
+      }
+
+      .fine-print {
+        padding: 30px 0px;
+        line-height: 1;
+      }
+
+      .fineprint .url {
+        text-decoration: underline;
+      }
+
+      .fine-print p {
+        color: #9e9e9e;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="center">EDUCAD</header>
+    <br /><br /><br />
+    <div class="container">
+      <a class="large-title">Application Received</a
+      ><span class="badge">New</span>
+    </div>
+
+    <br />
+
+    <div class="main">
+      <div class="right">
+        <a><b>A new applicant has submitted a request to be contacted.</b></a
+        ><br /><br />
+        <a
+          >Please ensure once the client has been contacted that the email has
+          been marked as completed. If the application is under review, please
+          tag it as uncompleted.</a
+        >
+        <br /><br />
+        <a class="title">Student Name</a><br />
+        <a><b>{{firstName}} {{lastName}}</b></a
+        ><br /><br />
+        <a class="title">Tuition Type</a><br />
+        <a><b>{{tuitionType}}</b></a
+        ><br /><br />
+        <a class="title">Email</a><br />
+        <a><b>{{email}}</b></a
+        ><br /><br />
+        <a class="title">Contact Number</a><br />
+        <a><b>{{contactNumber}}</b></a
+        ><br /><br />
+      </div>
+      <br />
+      <a>Thanks,</a><br />
+      <a>System Message</a>
+    </div>
+
+    <div class="fine-print">
+      <p>
+        We will never send you an email asking for sensitive information such as
+        bank or card details.<br />
+        If you have received such an email it might be a scam email,
+        <b>please contact us.</b>
+      </p>
+      <br />
+      <p>
+        This email is sent from an automated mailing server. We cannot respond
+        to replies sent to this email address.<br />For more information please
+        visit our <span class="url"><b>website</b>.</span>
+      </p>
+      <br />
+      <p><b>Address:</b></p>
+      <p>21 Patey Street, Manchester, England, M12 5RP</p>
+    </div>
+
+    <footer class="footer center">
+      <div class="icons">
+        <ul>
+          <a>F</a>
+          <a>F</a>
+          <a>F</a>
+          <a>F</a>
+        </ul>
+      </div>
+      <div class="text">
+        <a class="subtext">Copyright -</a><br />
+        <a class="subtext">Educad © 2023 All Rights Reserved.</a>
+      </div>
+    </footer>
+  </body>
+</html>

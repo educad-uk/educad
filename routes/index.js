@@ -56,6 +56,7 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailQuery, function(error, info) {
       if (error) {
         console.log(error);
+        Response.render('error');
       } else {
         console.log("Email sent: " + info.response);
       }
@@ -85,11 +86,13 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailQuery, function(error, info) {
       if (error) {
         console.log(error);
+        Response.render('error');
       } else {
         console.log("Email sent: " + info.response);
       }
     });
   });
+  Response.render('index');
 });
 
 router.get('/', function(req, res, next) {

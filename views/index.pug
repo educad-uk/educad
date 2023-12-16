@@ -179,3 +179,10 @@ footer.purple.text-center.text-white
   .text-center.p-3 Educad &copy; 2023 All Rights Reserved.
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm' crossorigin='anonymous')
 script(src='index.js')
+script.
+  const button = document.getElementById("remove");
+  const cookie = document.getElementById("cookie");
+  button.addEventListener("click", () => {
+  cookie.remove();
+  });
+

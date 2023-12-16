@@ -4,11 +4,15 @@ const fs = require("fs");
 const Mail = require("nodemailer");
 const bodyParser = require("body-parser");
 const Handlebars = require("handlebars");
+const path = require('path');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(express.static("public"));
+
+const indexPath = path.join(__dirname, '../views/index.pug');
+const errorPath = path.join(__dirname, '../views/error.pug');
 
 var readHTMLFile = function (path, callback) {
   fs.readFile(path, { encoding: "utf-8" }, function (err, html) {
@@ -56,10 +60,10 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailQuery, function(error, info) {
       if (error) {
         console.log(error);
-        Response.sendFile(__dirname + "./views/error.pug");
+        Response.sendFile(errorPath);
       } else {
         console.log("Email sent: " + info.response);
-        Response.sendFile(__dirname + "./views/index.pug");
+        Response.sendFile(indexPath);
       }
     });
   });
@@ -87,10 +91,10 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailQuery, function(error, info) {
       if (error) {
         console.log(error);
-        Response.sendFile(__dirname + "./views/error.pug");
+        Response.sendFile(errorPath);
       } else {
         console.log("Email sent: " + info.response);
-        Response.sendFile(__dirname + "./views/index.pug");
+        Response.sendFile(indexPath);
       }
     });
   });

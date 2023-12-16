@@ -64,20 +64,27 @@ router.post("/send", (Request, Response) => {
       }
     });
 
-    var MailClient = {
-      to: Request.body.email,
-      subject: "We have receieved your application",
-      text:
-        Request.body.firtName +
-        ", " +
-        Request.body.lastName +
-        ", " +
-        Request.body.contactNumber +
-        ", " +
-        Request.body.tuitionType,
+    readHTMLFile("./views/recipientEmail.pug", function (err, html2) {
+    if (err) {
+      console.log("error reading file", err);
+      return;
+    }
+    var template2 = Handlebars.compile(html2);
+    var replacements2 = {
+      firstName: Request.body.firstName,
+      lastName: Request.body.lastName,
+      contactNumber: Request.body.contactNumber,
+      tuitionType: Request.body.tuitionType,
     };
+    var htmlToSend2 = template2(replacements2);
 
-    MailObject.sendMail(MailClient, function (error, info) {
+    var MailQuery2 = {
+      to: Request.body.email,
+      subject: "We have recieved your application",
+      html: htmlToSend2,
+    };
+      
+    MailObject.sendMail(MailQuery2, function (error, info) {
       if (error) {
         console.log(error);
         Response.sendFile(__dirname + "./views/error.pug");

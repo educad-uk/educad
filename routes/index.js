@@ -5,10 +5,10 @@ const Mail = require("nodemailer");
 const bodyParser = require("body-parser");
 const Handlebars = require("handlebars");
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static("public"));
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(express.static("public"));
 
 var readHTMLFile = function (path, callback) {
   fs.readFile(path, { encoding: "utf-8" }, function (err, html) {
@@ -29,7 +29,7 @@ var MailObject = Mail.createTransport({
 });
 
 router.post("/send", (Request, Response) => {
-  readHTMLFile("./public/contactDetailsEmail.html", function (err, html) {
+  readHTMLFile("./views/contactDetailsEmail.pug", function (err, html) {
     if (err) {
       console.log("error reading file", err);
       return;
@@ -57,10 +57,10 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailQuery, function (error, info) {
       if (error) {
         console.log(error);
-        Response.sendFile(__dirname + "/public/404.html");
+        Response.sendFile(__dirname + "/views/error.pug");
       } else {
         console.log("Email sent: " + info.response);
-        Response.sendFile(__dirname + "/public/index.html");
+        Response.sendFile(__dirname + "/views/index.pug");
       }
     });
 
@@ -80,10 +80,10 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailClient, function (error, info) {
       if (error) {
         console.log(error);
-        Response.sendFile(__dirname + "/public/404.html");
+        Response.sendFile(__dirname + "/views/error.pug");
       } else {
         console.log("Email sent: " + info.response);
-        Response.sendFile(__dirname + "/public/index.html");
+        Response.sendFile(__dirname + "/views/index.pug");
       }
     });
   });

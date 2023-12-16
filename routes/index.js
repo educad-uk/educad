@@ -28,7 +28,7 @@ var MailObject = Mail.createTransport({
   },
 });
 
-router..post("/send", (Request, Response) => {
+router.post("/send", (Request, Response) => {
   readHTMLFile("./public/contactDetailsEmail.html", function (err, html) {
     if (err) {
       console.log("error reading file", err);

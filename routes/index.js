@@ -57,10 +57,10 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailQuery, function (error, info) {
       if (error) {
         console.log(error);
-        Response.sendFile(__dirname + "/views/error.pug");
+        Response.sendFile(__dirname + "./views/error.pug");
       } else {
         console.log("Email sent: " + info.response);
-        Response.sendFile(__dirname + "/views/index.pug");
+        Response.sendFile(__dirname + "./views/index.pug");
       }
     });
 
@@ -80,10 +80,10 @@ router.post("/send", (Request, Response) => {
     MailObject.sendMail(MailClient, function (error, info) {
       if (error) {
         console.log(error);
-        Response.sendFile(__dirname + "/views/error.pug");
+        Response.sendFile(__dirname + "./views/error.pug");
       } else {
         console.log("Email sent: " + info.response);
-        Response.sendFile(__dirname + "/views/index.pug");
+        Response.sendFile(__dirname + "./views/index.pug");
       }
     });
   });

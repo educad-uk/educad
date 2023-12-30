@@ -9,6 +9,7 @@
 
 body {
   background-color: #fefefe;
+  overflow: -moz-scrollbars-horizontal;
   overflow-x: hidden;
 }
 

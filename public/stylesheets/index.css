@@ -141,7 +141,10 @@ body {
   background-size: 100% 0.1em;
   background-position: 0 88%;
   transition: background-size 0.1s ease-in;
-  &:hover {
+}
+
+@media (hover: hover) {
+  landing-button:hover {
     background-size: 100% 88%;
     color: white;
   }

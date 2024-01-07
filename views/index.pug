@@ -142,10 +142,10 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
       .row
         .col
           label(for='firstName') Student Name
-          input#firstName.form-control(type='Text' name='firstName' aria-describedby='firstName' placeholder='First Name')
+          input#firstName.form-control(type='Text' name='firstName' aria-describedby='firstName' placeholder='First Name' required)
         .col
           label
-          input#lastName.form-control(type='Text' name='lastName' aria-describedby='lastName' placeholder='Last Name')
+          input#lastName.form-control(type='Text' name='lastName' aria-describedby='lastName' placeholder='Last Name' required)
     .form-group
       label(for='tuitionType') Tuition Type
       select#tuitionType.form-control(name='tuitionType')
@@ -157,11 +157,11 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
       small.form-text.text-muted  Enter the qualification your child is working towards. 
     .form-group
       label(for='email') Email Address
-      input#email.form-control(type='email' name='email' placeholder='example@gmail.com')
+      input#email.form-control(type='email' name='email' placeholder='example@gmail.com' required)
       small.form-text.text-muted  A confirmation email will be sent to the address you provide. 
     .form-group
       label(for='contactNumber') Contact Number
-      input#contactNumber.form-control(type='number' name='contactNumber' placeholder='+(44) 1234 765980')
+      input#contactNumber.form-control(type='number' name='contactNumber' placeholder='+(44) 1234 765980' required)
       small.form-text.text-muted  We will contact you by this number, please make sure it is correct. 
     button.btn.btn-light(type='submit') Submit
 footer.purple.text-center.text-white

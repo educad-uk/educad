@@ -16,11 +16,11 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
         li.nav-item
           a.nav-link.active(aria-current='page', href='#') Home
         li.nav-item
-          a.nav-link(href='#') About Us
+          a.nav-link(href='#', onclick='scrollToAboutUs') About Us
         li.nav-item
-          a.nav-link(href='#') Pricing
+          a.nav-link(href='#', onclick='scrollToForm()') Pricing
         li.nav-item
-          a.nav-link(href='#') Contact
+          a.nav-link(href='#', onclick='scrollToForm()') Contact
       a.icon-link.btn.btn-outline-light.fw-bold
         svg(xmlns='http://www.w3.org/2000/svg', height='1em', viewbox='0 0 512 512')
           style.
@@ -31,7 +31,7 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
         |         Login
 #cookie.cookie
   .cookie-card
-    span.title 🍪 Cookie Notice
+    span.title &#x1F36A; Cookie Notice
     p.description
       | We utilise cookies to give you the best experience.
       a(href='#') Read cookies policies
@@ -55,59 +55,41 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
   .banner-image
     // <img src="resources/Currency_Two Color.svg" width="500" />
   .banner-text
-    p.disclaimer
-      | Refer a friend and both get &pound;5 off our hourly rate!
+    p.disclaimer Refer a friend and both get &pound;5 off our hourly rate!
     a.share(onclick='scrollToForm()') Refer a friend
-.container.info
+#aboutUs.container.info
   a.info-title What do we provide?
   p.padding.info-subtitle
-    | Our personalised tuition program is designed to help students develop strong
-    | reading, writing, and critical thinking skills. Whether you&apos;re
-    | preparing for GCSE or SATs exams, our experienced tutors can help you
-    | improve your grades and achieve your academic goals.
+    | Our personalised learning program is designed to help students develop strong reading, writing, and critical thinking skills. Whether you&apos;re preparing for GCSE or SATs exams, our experienced tutors can help you improve your grades and achieve
+    | your academic goals.
   .container
     .row
       .col-sm
         a.info-heading Experienced Tutors
         p.info-subheading
-          | Our esteemed tutors are not only highly experienced, but they are also
-          | accomplished high-achievers who consistently score in the top
-          | percentile across the country.
+          | Our esteemed tutors are not only highly experienced, but they are also accomplished high-achievers who consistently score in the top percentile across the country.
       .col-sm
         a.info-heading Personalised
         p.info-subheading
-          | Experience personalised guidance from a highly skilled tutor who
-          | utilises valuable insights from your past assessments to strengthen
-          | areas of improvement and elevate your performance.
+          | Experience personalised guidance from a highly skilled tutor who utilises valuable insights from your past assessments to strengthen areas of improvement and elevate your performance.
       .col-sm
         a.info-heading Communication
         p.info-subheading
-          | We maintain a line of communication with the parents to keep them
-          | informed about their child&apos;s progress and provide regular updates
-          | on their performance.
+          | We maintain a line of communication with the parents to keep them informed about their child&apos;s progress and provide regular updates on their performance.
     .row
       .col-sm
         a.info-heading Assessments
         p.info-subheading
-          | We take a comprehensive approach to monitoring your progress by
-          | conducting regular assessments and providing valuable feedback on
-          | every subject we teach. This enables us to identify and address any
-          | areas where you may need extra support.
+          | We take a comprehensive approach to monitoring your progress by conducting regular assessments and providing valuable feedback on every subject we teach. This enables us to identify and address any areas where you may need extra support.
       .col-sm
         a.info-heading Resources
         p.info-subheading
-          | We provide students access to a wealth of additional learning
-          | resources, such as videos, practice quizzes, and interactive
-          | simulations, to help students reinforce their understanding of key
-          | concepts.
+          | We provide students access to a wealth of additional learning resources, such as videos, practice quizzes, and interactive simulations, to help students reinforce their understanding of key concepts.
       .col-sm
         a.info-heading Digital Portal
         a.new-icon New
         p.info-subheading
-          | We provide students access to a wealth of additional learning
-          | resources, such as videos, practice quizzes, and interactive
-          | simulations, to help students reinforce their understanding of key
-          | concepts.
+          | Coming soon.
 .container-fluid.statistics
   .container.text-center
     .row
@@ -118,8 +100,8 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
         a.stats-heading 5k+
         p.stats-subheading Hours dedicated into students
       .col-sm
-        a.stats-heading 99.77%
-        p.stats-subheading Uptime (90 days)
+        a.stats-heading 97.7%
+        p.stats-subheading Pass Rate
 #carouselExampleIndicators.carousel.slide
   .carousel-indicators
     button.active(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
@@ -129,31 +111,23 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
     .carousel-item.active
       .container.text-center
         p.testimonial
-        a.testimonial-name Ibrahim Khan
+        a.testimonial-name Hamza Ali
         p.testimonial-text
-          | Educad has truly impressed me with their dedicated tutors and
-          | effective teaching methods. My child&apos;s progress has been
-          | remarkable, and I&apos;m grateful for the positive impact they&apos;ve
-          | had on his learning journey. Highly recommended!
+          | Educad has truly impressed me with their dedicated tutors and effective teaching methods. My child&apos;s progress has been remarkable, and I&apos;m grateful for the positive impact they&apos;ve had on his learning journey. Highly recommended!
         p.testimonial-sub Student&apos;s Parent
     .carousel-item
       .container.text-center
         p.testimonial
-        a.testimonial-name Hamza Ali
+        a.testimonial-name Adam Douglas
         p.testimonial-text
-          | Educad has been a valuable learning resource. The tutors are
-          | knowledgeable and helpful, and the study materials are effective. My
-          | understanding and grades have improved significantly.
+          | I found Educad as a valuable learning resource. The tutors are knowledgeable and helpful, and the study materials are effective. My understanding and my grades have improved significantly.
         p.testimonial-sub Educad Student
     .carousel-item
       .container.text-center
         p.testimonial
         a.testimonial-name Ayesha Khan
         p.testimonial-text
-          | Educad made studying for my GCSEs so easy. Their tutors are really
-          | knowledgeable and made even the toughest subjects easy to understand.
-          | I felt confident and well-prepared for my exams, thanks to their
-          | personalised and engaging approach to teaching.&quot;
+          | This made studying for my GCSEs so easy. Their program made even the toughest subjects easy to understand. I felt confident and well-prepared for my exams, thanks to their personalised and engaging approach to teaching.&quot;
         p.testimonial-sub Educad Student
   button.carousel-control-prev(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='prev')
     span.carousel-control-prev-icon(aria-hidden='true')
@@ -163,8 +137,7 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
     span.visually-hidden Next
 #form.container.form
   a.info-title Interested in joining us?
-  p.info-subtitle
-    | Fill in this quick survey and a member of our team will contact you shortly.
+  p.info-subtitle Fill in this quick survey and a member of our team will contact you shortly.
   form(action='/send', method='POST')
     .form-group
       .row
@@ -182,18 +155,15 @@ nav.navbar.navbar-expand-lg.navbar-colour.navbar-light.py-3.navbar-dark
         option SATs
         option GCSE
         option A-Level
-      small.form-text.text-muted
-        | Enter the qualification your child is working towards.
+      small.form-text.text-muted Enter the qualification your child is working towards.
     .form-group
       label(for='email') Email Address
       input#email.form-control(type='email', name='email', placeholder='example@gmail.com', required='')
-      small.form-text.text-muted
-        | A confirmation email will be sent to the address you provide.
+      small.form-text.text-muted A confirmation email will be sent to the address you provide.
     .form-group
       label(for='contactNumber') Contact Number
       input#contactNumber.form-control(type='number', name='contactNumber', placeholder='+(44) 1234 765980', required='')
-      small.form-text.text-muted
-        | We will contact you by this number, please make sure it is correct.
+      small.form-text.text-muted We will contact you by this number, please make sure it is correct.
     button.btn.btn-light(type='submit') Submit
 footer.purple.text-center.text-white
   .container.p-4.pb-0
@@ -206,7 +176,7 @@ footer.purple.text-center.text-white
         i.fa.fa-google
       a.btn.btn-outline-light.btn-floating.m-1(href='#!', role='button')
         i.fa.fa-instagram
-  |   Copyright -
+  |  Copyright -
   .text-center.p-3 Educad &copy; 2023 All Rights Reserved.
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js', integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm', crossorigin='anonymous')
 script(src='index.js')
@@ -220,6 +190,16 @@ script(type='text/javascript').
   function scrollToForm() {
   var formElement = document.getElementById("form");
   if (formElement) {
-  formElement.scrollIntoView({ behavior: "smooth" });
+  formElement.scrollIntoView({
+  behavior: "smooth"
+  });
+  }
+  }
+  function scrollToAboutUs() {
+  var aboutUsElement = document.getElementById("aboutUs");
+  if (aboutUsElement) {
+  aboutUsElement.scrollIntoView({
+  behavior: "smooth"
+  });
   }
   }

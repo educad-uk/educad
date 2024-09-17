@@ -23,8 +23,8 @@ var readHTMLFile = function (path, callback) {
 var MailObject = Mail.createTransport({
   service: "gmail",
   auth: {
-    user: "educadtuition@gmail.com",
-    pass: "ocqg uppp fish prip",
+    user: "",
+    pass: "",
   },
 });
 
